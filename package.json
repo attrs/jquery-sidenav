@@ -1,6 +1,6 @@
 {
   "name": "jquery-sidenav",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "jquery plugin for accordion side navigation",
   "main": "lib/sidenav.js",
   "repository": "attrs/jquery-sidenav",
