@@ -1,0 +1,29 @@
+{
+  "name": "jquery-sidenav",
+  "version": "0.0.0",
+  "description": "jquery plugin for accordion side navigation",
+  "main": "dist/sidenav.min.js",
+  "authors": [
+    "joje <joje.attrs@gmail.com>"
+  ],
+  "homepage": "https://github.com/attrs/jquery-sidenav",
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "sidebar",
+    "nav",
+    "navigation",
+    "sidenavigation",
+    "sidenav"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "npm-shrinkwrap.js",
+    "gulpfile.js",
+    "test",
+    "tests",
+    "examples",
+    "bin"
+  ]
+}
