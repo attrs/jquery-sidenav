@@ -71,13 +71,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if( arg.length === 1 ) lasturl = action;
 	  
 	  return this.each(function() {
-	    var current = $(this);
-	    var nav = this.__sidenav__ = this.__sidenav__ || sidenavigation(this).init(lasturl);
+	    var nav = sidenavigation(this).init();
 	    
 	    if( arg.length === 1 ) {
-	      nav.select(arg[0]);
-	    } else if( action === 'init' ) {
-	      nav.init();
+	      nav.select(action);
+	    } else if( !action || action === 'init' ) {
+	      nav.select(lasturl);
 	    } else if( action === 'open' ) {
 	      nav.open(value);
 	    } else if( action === 'close' ) {
@@ -97,16 +96,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      $(current).find('.accordion-toggle').each(function() {
 	        if( this.__init__ ) return;
 	        this.__init__ = true;
-	      
+	        
 	        $(this).on('click', function() {
 	          if( $(this).hasClass('menu-open') ) self.close(this);
 	          else self.open(this);
-	        
+	          
 	          return false;
 	        });
 	      });
 	      
-	      if( url ) this.select(url);
 	      return this;
 	    },
 	    open: function(target) {
@@ -133,18 +131,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return this;
 	    },
 	    select: function(url) {
+	      if( !url ) return;
+	      
 	      var tobeselected, targetli, length, coselect, colen;
 	      $(current).find('.sidenav a[href]').each(function() {
 	        //if( tobeselected ) return;
 	        var href = this.getAttribute('href');
 	        if( !href ) return;
 	        
-	        if( href.startsWith(url) && (!length || length >= href.length) ) {
+	        if( href.indexOf(url) === 0 && (!length || length >= href.length) ) {
 	          length = href.length;
 	          tobeselected = this;
 	        }
 	        
-	        if( href && url.startsWith(href) && (!colen || colen < href.length) ) {
+	        if( href && url.indexOf(href) === 0 && (!colen || colen < href.length) ) {
 	          colen = href.length;
 	          coselect = this;
 	        }
