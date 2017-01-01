@@ -1,25 +1,25 @@
-# sidenav
+# jquery-sidenav
 
 jquery plugin for accordion side navigation
 
 [![NPM Version][npm-version]][npm-url] [![NPM Downloads][npm-total]][npm-url] [![NPM Downloads][npm-month]][npm-url] [![NPM Downloads][license]][npm-url]
 
-[npm-version]: https://img.shields.io/npm/v/sidenav.svg?style=flat
-[npm-url]: https://npmjs.org/package/sidenav
-[npm-total]: https://img.shields.io/npm/dt/sidenav.svg?style=flat
-[npm-month]: https://img.shields.io/npm/dm/sidenav.svg?style=flat
-[license]: https://img.shields.io/npm/l/sidenav.svg?style=flat
+[npm-version]: https://img.shields.io/npm/v/jquery-sidenav.svg?style=flat
+[npm-url]: https://npmjs.org/package/jquery-sidenav
+[npm-total]: https://img.shields.io/npm/dt/jquery-sidenav.svg?style=flat
+[npm-month]: https://img.shields.io/npm/dm/jquery-sidenav.svg?style=flat
+[license]: https://img.shields.io/npm/l/jquery-sidenav.svg?style=flat
 
 
 ## Installation
 ```sh
-$ npm install sidenav --save
+$ npm install jquery-sidenav --save
 ```
 
 ## Usage
 ### commonjs
 ```javascript
-require('sidenav');
+require('jquery-sidenav');
 ```
 
 ### browser
