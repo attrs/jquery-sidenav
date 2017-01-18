@@ -184,7 +184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if( this !== targetli ) $(this).removeClass('active').parents('li').removeClass('active');
 	  });
 	  
-	  $(targetli).addClass('active').parents('li').addClass('active')
+	  $(targetli).addClass('active');
 	  
 	  open(targetli.parentNode);
 	}
